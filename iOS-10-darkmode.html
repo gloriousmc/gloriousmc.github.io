@@ -24,8 +24,25 @@
       </header>
       <section>
          <h3><a id="darkmode-title" class="anchor" href="#" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>iOS 10 Darkmode References</h3>
+         <p>So here im going to post and detail everything i find that links to Dark Mode in iOS 10. When each new beta comes out ill add a section onto this post and detail everything i find and talk about things that others have and credit them. If any of the infomation here is wrong please let me know.</p>
+
+         <h2><code>-[UIApplication _registerForSystemwideDarkModeChangeNotification];</code></h2>
+         <p>I first noticed this is beta 2. I took it from the iPhone Simulator SDK in the UIKit.framework. There doesnt seem to be anything in the actual UIKit framework running on iOS. Alot is mentioned of the notification center, now at first i thought that it was used in a older firmware so i checked the iOS 9 and 8 simulator SDK's and neither had the <code>-[UIApplication _registerForSystemwideDarkModeChangeNotification];</code>function. Here is the function below.<br>
+         <code>
+         00030e94    push   ebp
+         00030e95    mov    ebp, esp
+         00030e97    push   esi
+         00030e98    push   eax
+         00030e98    call   0x30e9e
+         00030e9e    pop    esi
+         </code>
+         </p>
       </section>
-   </div>
+      <footer>
+         <p><small>Hosted on Github Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+      </div>
+      <script src="javascripts/scale.fix.js"></script>
 
 </body>
 </html>
