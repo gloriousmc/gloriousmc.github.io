@@ -29,12 +29,12 @@
          <h2><code>-[UIApplication _registerForSystemwideDarkModeChangeNotification];</code></h2>
          <p>I first noticed this is beta 2. I took it from the iPhone Simulator SDK in the UIKit.framework. There doesnt seem to be anything in the actual UIKit framework running on iOS. Alot is mentioned of the notification center, now at first i thought that it was used in a older firmware so i checked the iOS 9 and 8 simulator SDK's and neither had the <code>-[UIApplication _registerForSystemwideDarkModeChangeNotification];</code>function. Here is the function below.<br>
          <code>
-         00030e94    push   ebp
-         00030e95    mov    ebp, esp
-         00030e97    push   esi
-         00030e98    push   eax
-         00030e98    call   0x30e9e
-         00030e9e    pop    esi
+         00030e94    push   ebp <br>
+         00030e95    mov    ebp, esp <br>
+         00030e97    push   esi <br>
+         00030e98    push   eax <br>
+         00030e98    call   0x30e9e <br>
+         00030e9e    pop    esi <br>
          </code>
          </p>
       </section>
