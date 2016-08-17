@@ -24,6 +24,27 @@
       </header>
       <section>
          <h3><a id="darkmode-title" class="anchor" href="#" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>iOS 10 Darkmode References</h3>
+         <!--ENTRY 2-->
+         <h4>Entry 2: idk - b6</h4>
+         <p>Okay as im a bit of an idiot i didnt think to check other frameworks. Today ill talk about what i found in ChatKit. Now i dont know how long it has been there but ill talk about what i found anyway.</p>
+         <p>Now if you open the iPhone sims ChatKit.framework binary in a disassembler (i use hopper because im skint and can't afford IDA :(. ) and if you search "DarkMode" you will see something like</p>
+         <code>
+         [CKUIThemeDark navBarStyle]<br>
+         [CKUIThemeDark messagesControllerBackgroundColor]<br>
+         [CKUIThemeDark theresToManyForMeToContinue]
+         </code><br>
+         <p><br>Thats just a few of them. Theres too many for me to write here but this does show more proof of a darkmode. I am starting to think that the darkmode will be a iPhone 7 only feature... but of course that wont matter when the jailbreak comes out. You can get a darkmode on iOS 9 right now with the eclipse tweak that allows you to select which apps have a darkmode. </p>
+         <p>Theres 1 last bit i want to mention. There are 3 other things i noticed that i would like to mention</p>
+         <code>
+           _darkUIEnabled.once<br>
+           _darkUIEnabled.sBehavior.2072<br>
+           _darkUIEnabled.TextColor.once
+         </code><br>
+         <p><br>Im not exactly sure what the middle one is but im guessing that the <code>.once</code> once is a one time enabled darkmode so for example when you close that app and reopen it it gets reset to lightMode or lightUI. <code>.TextColor.once</code> Sounds the same as <code>.once</code> but for text instead.</p>
+         <p>Thats all i found after a quick half hour of digging, i havent looked at any other frameworks which i will eventually do then spend half a year writing it up here :P. One more thing before i go if you wouldnt mind donating to me and helping me out a bit <a href="paypal.me/h3adsh0tzz">here</a> Thanks for reading.</p>
+
+
+         <!--ENTRY 1-->
          <h4>Entry 1: b2 - b5</h4>
          <p>So here im going to post and detail everything i find that links to Dark Mode in iOS 10. When each new beta comes out ill add a section onto this post and detail everything i find and talk about things that others have and credit them. If any of the infomation here is wrong please let me know.</p>
 
