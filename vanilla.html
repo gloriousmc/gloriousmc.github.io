@@ -43,79 +43,11 @@
 
          <!--ENTRY 1-->
          <h4>3rd Party Programs</h4>
-         <p>So here im going to post and detail everything i find that links to Dark Mode in iOS 10. When each new beta comes out ill add a section onto this post and detail everything i find and talk about things that others have and credit them. If any of the infomation here is wrong please let me know.</p>
-
-         <h2><code>-[UIApplication _registerForSystemwideDarkModeChangeNotification];</code></h2>
+         <p>Some things would not be possible without some extra help. Programs like <a href="http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-tools/1262665-nbtexplorer-nbt-editor-for-windows-and-mac">NBTExplorer</a>helped style the username prefixed and objective display names.</p>
+        
          <p>I first noticed this is beta 2. I took it from the iPhone Simulator SDK in the UIKit.framework. There doesnt seem to be anything in the actual UIKit framework running on iOS. Alot is mentioned of the notification center, now at first i thought that it was used in a older firmware so i checked the iOS 9 and 8 simulator SDK's and neither had the <code>-[UIApplication _registerForSystemwideDarkModeChangeNotification];</code>function. Here is the function below.<br></p>
          <p class="ARMasemb">
-<pre>
-<code>
-00030e94    push   ebp <br>
-00030e95    mov    ebp, esp <br>
-00030e97    push   esi <br>
-00030e98    push   eax <br>
-00030e98    call   0x30e9e <br>
-00030e9e    pop    esi <br>
-00030e9e    call   imp___synbol_stub__CFNotificationCenterGetDarwinNotifyCenter<br>
-00030e9f    sub    esp, 0x8<br>
-00030ea4    lea    ecx, dword [ds:esi-0x30e9e+cfstring_com_apple_darkmode_changed]<br>
-00030ea7    lea    edx, dword [ds:esi-0x30e9e+__darkModeChanged]<br>
-00030ead    push   0x4<br>
-00030eb3    push   0x0<br>
-00030eb5    push   ecx<br>
-00030eb7    push   edx<br>
-00030eb8    push   dword [ds:esi-0x30e9e+_UIApp]<br>
-00030eb9    push   eax<br>
-00030ebf    call   imp__symbol_stub_CFNotificationCenterAddObserver<br>
-00030ec0    add    esp, 0x24<br>
-00030ec5    pop    esi<br>
-00030ec8    pop    ebp<br>
-00030ec9    ret<br>
-</code>
-</pre>
-         </p>
-         <p>I Also came accross the function <code>__darkModeChanged; </code>i also found this the same time i found the one above. As i dont know much assembely i dont understand much of what is going on here but i know it has something to do with darkmode. Take a look at the code here.</p>
-         <p class="ARMasemb">
-<pre>
-<code>
-00030ecb    push   ebp<br>
-00030ecc    mov    ebp, esp<br>
-00030ece    push   edi<br>
-00030ecf    push   esi<br>
-00030ed0    call   0x30ed5<br>
-00030ed5    pop    edi<br>
-00030ed6    sub    esp, 0x8<br>
-00030ed9    push   dword [ds:edi-0x30ed5+0x10fffa8]<br>
-00030edf    push   dword [ds:edi-0x30ed5+objc_cls_ref_NSNotificationCenter]<br>
-00030ee5    call   imp___symbol_stub__objc_msgSend<br>
-00030eea    add    esp, 0x10<br>
-00030eed    mov    ebp, ebp<br>
-00030eef    sub    esp, 0xc <br>
-00030ef2    push   eax<br>
-00030ef3    call   imp___symbol_stub__objc_retainAutoreleasedReturnValue<br>
-00030ef8    add    esp, 0x10<br>
-00030efb    mov    esi, eax<br>
-00030efd    sub    esp, 0xc<br>
-00030f00    lea    eax, dword [ds:edi-0x30ed5+cfstring__UIApplicationEffectiveUserInterfaceStyleNotification]<br>
-00030f06    push   0x0<br>
-00030f08    push   dword [ds:edi-0x30ed5+_UIApp]<br>
-00030f0e    push   eax<br>
-00030f0f    push   dword [ds:edi-0x30ed5+0x110096c]<br>
-00030f15    push   esi<br>
-00030f16    call   imp___symbol_stub__objc_msgSend<br>
-00030f1b    add    esp, 0x20<br>
-00030f1e    sub    esp, 0xc<br>
-00030f21    push   esi<br>
-00030f22    call   imp___symbol_stub_objc_release<br>
-00030f27    add    esp, 0x10<br>
-00030f2a    pop    esi<br>
-00030f2b    pop    edi<br>
-00030f2c    pop    ebp<br>
-00030f2d    ret
-</code>
-</pre>
-         </p>
-         <p>I have seen screenshots of someone actually managing to enable darkmode on the iOS Simulator meaning that all the code for darkmode (or atleast most of it) is already in the iOS simulators SDK. I Will continue to look into darkmode and many other parts of iOS 10. Thanks for reading.</p>
+
       </section>
       <footer>
          <p><small>Hosted on Github Pages</small></p>
