@@ -20,32 +20,29 @@
          <p></p>
          
          
-         <p class="view"><a href="https://h3adshotzz.github.io">Go back</a></p>
+         <p class="view"><a href="https://gloriousmc.github.io">Go back</a></p>
       </header>
       <section>
-         <h3><a id="darkmode-title" class="anchor" href="#" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>iOS 10 Darkmode References</h3>
+         <h3><a id="darkmode-title" class="anchor" href="#" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vanilla Server</h3>
          <!--ENTRY 2-->
-         <h4>Entry 2: idk - b6</h4>
-         <p>Okay as im a bit of an idiot i didnt think to check other frameworks. Today ill talk about what i found in ChatKit. Now i dont know how long it has been there but ill talk about what i found anyway.</p>
-         <p>Now if you open the iPhone sims ChatKit.framework binary in a disassembler (i use hopper because im skint and can't afford IDA :(. ) and if you search "DarkMode" you will see something like</p>
+         <h4>Commands</h4>
+         <p>This is a calm 100% command-block-run vanilla server. That means no confusing plugins or gimmicks, we promise. To us, vanilla is the flavor of being simple.</p>
+         <p>Although plugins were the easy way out, we wanted a challenge. We had to use commands like:</p>
          <code>
-         [CKUIThemeDark navBarStyle]<br>
-         [CKUIThemeDark messagesControllerBackgroundColor]<br>
-         [CKUIThemeDark theresToManyForMeToContinue]
+         /execute @a[team=hide1] ~ ~ ~ summon leash_knot ~ ~ ~ {CustomName:Center}<br>
+         /scoreboard players set @a[score_hay=1,score_hay_min=1] hay 0
          </code><br>
-         <p><br>Thats just a few of them. Theres too many for me to write here but this does show more proof of a darkmode. I am starting to think that the darkmode will be a iPhone 7 only feature... but of course that wont matter when the jailbreak comes out. You can get a darkmode on iOS 9 right now with the eclipse tweak that allows you to select which apps have a darkmode. </p>
-         <p>Theres 1 last bit i want to mention. There are 3 other things i noticed that i would like to mention</p>
+         <p><br>Thats just a few of them. There are many more commands that make the server possible. In fact, there are even commands that you wouldn't even think are there.</p>
+         <p>Have you ever heard of /trigger? It's used to execute a scoreboard by a player.</p>
          <code>
-           _darkUIEnabled.once<br>
-           _darkUIEnabled.sBehavior.2072<br>
-           _darkUIEnabled.TextColor.once
+           /trigger grass set 1
          </code><br>
          <p><br>Im not exactly sure what the middle one is but im guessing that the <code>.once</code> once is a one time enabled darkmode so for example when you close that app and reopen it it gets reset to lightMode or lightUI. <code>.TextColor.once</code> Sounds the same as <code>.once</code> but for text instead.</p>
          <p>Thats all i found after a quick half hour of digging, i havent looked at any other frameworks which i will eventually do then spend half a year writing it up here :P. One more thing before i go if you wouldnt mind donating to me and helping me out a bit <a href="paypal.me/h3adsh0tzz">here</a> Thanks for reading.</p>
 
 
          <!--ENTRY 1-->
-         <h4>Entry 1: b2 - b5</h4>
+         <h4>3rd Party Programs</h4>
          <p>So here im going to post and detail everything i find that links to Dark Mode in iOS 10. When each new beta comes out ill add a section onto this post and detail everything i find and talk about things that others have and credit them. If any of the infomation here is wrong please let me know.</p>
 
          <h2><code>-[UIApplication _registerForSystemwideDarkModeChangeNotification];</code></h2>
@@ -121,7 +118,7 @@
          <p>I have seen screenshots of someone actually managing to enable darkmode on the iOS Simulator meaning that all the code for darkmode (or atleast most of it) is already in the iOS simulators SDK. I Will continue to look into darkmode and many other parts of iOS 10. Thanks for reading.</p>
       </section>
       <footer>
-         <p><small>Hosted on Github Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+         <p><small>Hosted on Github Pages</small></p>
       </footer>
       </div>
       <script src="javascripts/scale.fix.js"></script>
